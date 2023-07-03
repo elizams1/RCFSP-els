@@ -2,7 +2,7 @@
 from flask import Flask, jsonify, render_template, request, url_for
 import pandas as pd
 # Creating an instance of the Flask class
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='', static_folder="./static")
 
 # Creating a new endpoint with this instance as a function decorator
 path_one = {{ url_for('static', filename='data/DataProdukVers5.csv') }}
