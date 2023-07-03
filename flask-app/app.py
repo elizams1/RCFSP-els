@@ -5,9 +5,8 @@ import pandas as pd
 app = Flask(__name__, static_url_path='', static_folder="./static")
 
 # Creating a new endpoint with this instance as a function decorator
-path_one = {{ url_for('static', filename='data/DataProdukVers5.csv') }}
-df_product = pd.read_csv(
-    "path_one")
+
+df_product = pd.read_csv('/flask-app/static/data/DataProdukVers5.csv')
 
 df_html = df_product.values
 
