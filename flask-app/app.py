@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # Creating a new endpoint with this instance as a function decorator
 df_product = pd.read_csv(
-    './static/data/DataProdukVers5.csv')
+    'DataProdukVers5.csv')
 
 df_html = df_product.values
 
