@@ -17,7 +17,9 @@ def hello_world():
 
 @app.route('/second', methods=['GET', 'POST'])
 def sec_page():
-    return render_template('second-page.html', data=df_html)
+    
+    if request.method == 'GET':
+        return render_template('second-page.html', data=df_html)
 
 
 # Starting the Server
