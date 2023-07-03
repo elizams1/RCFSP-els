@@ -3,6 +3,10 @@
     {
       "src":"flask-app/app.py",
       "use":"@vercel/python"
+    },
+    {
+      "src":"flask-app/static/**",
+      "use":"@vercel/static"
     }
   ],
   "routes":[

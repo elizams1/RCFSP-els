@@ -1,12 +1,13 @@
 # Importing Flask
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, jsonify, render_template, request, url_for
 import pandas as pd
 # Creating an instance of the Flask class
 app = Flask(__name__)
 
 # Creating a new endpoint with this instance as a function decorator
+path_one = {{ url_for('static', filename='data/DataProdukVers5.csv') }}
 df_product = pd.read_csv(
-    './DataProdukVers5.csv')
+    "path_one")
 
 df_html = df_product.values
 
